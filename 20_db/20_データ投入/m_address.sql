@@ -1,4 +1,4 @@
-USE `tastylog`
+USE `hirota-tastylog`
 
 INSERT INTO m_address VALUES (13101,"1000000","ﾄｳｷｮｳﾄ","ﾁﾖﾀﾞｸ","","東京都","千代田区","");
 INSERT INTO m_address VALUES (13101,"1020072","ﾄｳｷｮｳﾄ","ﾁﾖﾀﾞｸ","ｲｲﾀﾞﾊﾞｼ","東京都","千代田区","飯田橋");

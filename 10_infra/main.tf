@@ -10,10 +10,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "{YOUR-S3-BUCKET-NAME}"
-    key     = "{YOUR-S3-BUCKET-KEY}"
+    bucket  = "gh-udemy"
+    key     = "hirota-training-gha.tfstate"
     region  = "ap-northeast-1"
-    profile = "terraform"
+    profile = "pf-1-sandbox"
   }
 }
 
@@ -21,12 +21,12 @@ terraform {
 # Provider
 # ---------------------------------------------
 provider "aws" {
-  profile = "terraform"
+  profile = "pf-1-sandbox"
   region  = "ap-northeast-1"
 }
 
 provider "aws" {
   alias   = "virginia"
-  profile = "terraform"
+  profile = "pf-1-sandbox"
   region  = "us-east-1"
 }

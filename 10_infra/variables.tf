@@ -3,7 +3,7 @@
 # ---------------------------------------------
 variable "project" {
   type    = string
-  default = "tastylog"
+  default = "hirota-tastylog"
 }
 
 variable "environment" {

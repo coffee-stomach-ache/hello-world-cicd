@@ -8,22 +8,22 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema tastylog
+-- Schema hirota-tastylog
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `tastylog` ;
+DROP SCHEMA IF EXISTS `hirota-tastylog` ;
 
 -- -----------------------------------------------------
--- Schema tastylog
+-- Schema hirota-tastylog
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `tastylog` DEFAULT CHARACTER SET utf8 ;
-USE `tastylog` ;
+CREATE SCHEMA IF NOT EXISTS `hirota-tastylog` DEFAULT CHARACTER SET utf8 ;
+USE `hirota-tastylog` ;
 
 -- -----------------------------------------------------
--- Table `tastylog`.`m_address`
+-- Table `hirota-tastylog`.`m_address`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`m_address` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`m_address` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`m_address` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`m_address` (
   `jis_code` INT NULL DEFAULT NULL,
   `post_code` VARCHAR(7) NOT NULL,
   `prefecture_kana` VARCHAR(90) NULL DEFAULT NULL,
@@ -37,11 +37,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`t_shop`
+-- Table `hirota-tastylog`.`t_shop`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`t_shop` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`t_shop` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`t_shop` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`t_shop` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(120) NOT NULL,
   `kana` VARCHAR(120) NULL DEFAULT NULL,
@@ -62,11 +62,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`t_user`
+-- Table `hirota-tastylog`.`t_user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`t_user` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`t_user` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`t_user` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`t_user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL DEFAULT NULL,
   `email` VARCHAR(45) NOT NULL,
@@ -82,11 +82,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`t_review`
+-- Table `hirota-tastylog`.`t_review`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`t_review` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`t_review` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`t_review` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`t_review` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `shop_id` INT NOT NULL,
   `user_id` INT NOT NULL,
@@ -102,11 +102,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`m_category`
+-- Table `hirota-tastylog`.`m_category`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`m_category` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`m_category` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`m_category` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`m_category` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `parent_id` INT NULL DEFAULT NULL,
   `name` VARCHAR(100) NOT NULL,
@@ -116,11 +116,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`t_shop_category`
+-- Table `hirota-tastylog`.`t_shop_category`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`t_shop_category` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`t_shop_category` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`t_shop_category` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`t_shop_category` (
   `shop_id` INT NOT NULL,
   `category_id` INT NOT NULL,
   INDEX `idx_shop_category_shop_id` (`shop_id` ASC) VISIBLE,
@@ -129,11 +129,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`sessions`
+-- Table `hirota-tastylog`.`sessions`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`sessions` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`sessions` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`sessions` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`sessions` (
   `session_id` VARCHAR(128) NOT NULL,
   `expires` INT NOT NULL,
   `data` TEXT NULL DEFAULT NULL,
@@ -142,11 +142,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `tastylog`.`t_login_history`
+-- Table `hirota-tastylog`.`t_login_history`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `tastylog`.`t_login_history` ;
+DROP TABLE IF EXISTS `hirota-tastylog`.`t_login_history` ;
 
-CREATE TABLE IF NOT EXISTS `tastylog`.`t_login_history` (
+CREATE TABLE IF NOT EXISTS `hirota-tastylog`.`t_login_history` (
   `user_id` INT NOT NULL,
   `login` DATETIME NOT NULL,
   `host_name` VARCHAR(256) NULL DEFAULT NULL,

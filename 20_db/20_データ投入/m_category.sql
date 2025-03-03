@@ -1,4 +1,4 @@
-USE `tastylog`
+USE `hirota-tastylog`
 
 INSERT INTO m_category VALUES(1,NULL,"和食");
 INSERT INTO m_category VALUES(2,1,"日本料理");
