@@ -1,4 +1,4 @@
-﻿USE `hirota-tastylog`
+﻿USE `hirotatastylog`
 
 INSERT INTO t_review VALUES (1,2275,395,4,"2013/10/31 15:39:15","2013/11/02 12:45:28","コスパ抜群！");
 INSERT INTO t_review VALUES (2,2833,494,3,"2019/09/11 22:35:54","2019/09/14 07:21:32","ごちそうさまでした！");

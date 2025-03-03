@@ -18,7 +18,7 @@ resource "aws_ssm_parameter" "database" {
   name  = "/${var.project}/${var.environment}/app/MYSQL_DATABASE"
   type  = "String"
   value = aws_db_instance.mysql_standalone.name
-  # value = "hirota-tastylog"
+  # value = "hirotatastylog"
 }
 
 resource "aws_ssm_parameter" "username" {

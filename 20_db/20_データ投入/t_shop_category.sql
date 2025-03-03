@@ -1,4 +1,4 @@
-﻿USE `hirota-tastylog`
+﻿USE `hirotatastylog`
 
 INSERT INTO t_shop_category VALUES (6,17);
 INSERT INTO t_shop_category VALUES (6,18);

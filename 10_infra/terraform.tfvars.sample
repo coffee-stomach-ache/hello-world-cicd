@@ -1,4 +1,4 @@
-project     = "hirota-tastylog"
+project     = "hirotatastylog"
 environment = "dev"
 username    = "admin"
 password    = "Passw0rd"

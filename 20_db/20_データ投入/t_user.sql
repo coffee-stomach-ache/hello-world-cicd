@@ -1,4 +1,4 @@
-﻿USE `hirota-tastylog`
+﻿USE `hirotatastylog`
 
 INSERT INTO t_user (`id`,`name`,`email`,`password`) VALUES (1,"笹川 和花","o7UacEU@sample.co.jp","HN3GZVuw");
 INSERT INTO t_user (`id`,`name`,`email`,`password`) VALUES (2,"川名 璃奈","G3SbaFmJY_@test.jp","On2MBPsg");
