@@ -7,10 +7,10 @@ RUN cd /home/node/webapp; \
     chmod +x /usr/local/bin/docker-entrypoint.sh; \
     npm install;
 
-ENV MYSQL_HOST="127.0.0.1"
+ENV MYSQL_HOST="hirotatastylog-dev-mysql-standalone.choimgmq6ws8.ap-northeast-1.rds.amazonaws.com"
 ENV MYSQL_PORT="3306"
-ENV MYSQL_USERNAME="YOUR-MYSQL-USERNAME"
-ENV MYSQL_PASSWORD="YOUR-MYSQL-PASSWORD"
+ENV MYSQL_USERNAME="admin"
+ENV MYSQL_PASSWORD="Passw0rd"
 ENV MYSQL_DATABASE="hirotatastylog"
 
 EXPOSE 3000
