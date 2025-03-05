@@ -1,10 +1,10 @@
-# name: "Hello World"
+name: "Hello World"
 
-# on: [push]
+on: [push]
 
-# jobs:
-#   sample:
-#     name: Hello World Job
-#     runs-on: ubuntu-latest
-#     steps:
-#       - run: echo "hello world"
+jobs:
+  sample:
+    name: Hello World Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world"
